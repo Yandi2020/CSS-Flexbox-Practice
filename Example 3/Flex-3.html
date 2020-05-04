@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Example 3</title>
+    <link rel="stylesheet" href="Flex-3.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <!-- ul is flex-container -->
+            <ul class="main">
+                <!-- li is flexbox or flex-item -->
+                <li><a href="">Home</a></li>
+                <li><a href="">Shop</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">About</a></li>
+            </ul>
+
+            <!-- 08. create social links, put them in seperate ul, to style it differently,
+                     seperate ul is seperate flex container -->
+            <ul class="social">
+                <li><a href="" class="fb">Facebook</a></li>
+                <li><a href="" class="tw">Twitter</a></li>
+            </ul>
+        </nav>
+
+        <!-- give user the control to choose between stack (on top of each other) layout and 
+             grid layout for articles -->
+        <div style="margin: 20px;">
+            <span>Layout:</span>
+            <a href="#" class="stack">Stack</a>
+            <a href="#" class="grid">Grid</a>
+        </div>
+    
+
+        <section id="blocks">
+            <article>
+                <h2>Today to do stuff 1</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ab tempore maxime ipsum blanditiis natus quae quia soluta possimus nostrum, sunt accusamus rem est alias autem vitae nobis culpa nisi aut sequi, exercitationem voluptates ex! Voluptatibus quidem debitis nisi suscipit vero voluptate doloremque dicta? Quasi eius error libero provident non.</p>
+            </article>
+            <article>
+                <h2>Today to do stuff 2</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ab tempore maxime ipsum blanditiis natus quae quia soluta possimus nostrum, sunt accusamus rem est alias autem vitae nobis culpa nisi aut sequi, exercitationem voluptates ex! Voluptatibus quidem debitis nisi suscipit vero voluptate doloremque dicta? Quasi eius error libero provident non.</p>
+            </article>
+            <article>
+                <h2>Today to do stuff 3</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ab tempore maxime ipsum blanditiis natus quae quia soluta possimus nostrum, sunt accusamus rem est alias autem vitae nobis culpa nisi aut sequi, exercitationem voluptates ex! Voluptatibus quidem debitis nisi suscipit vero voluptate doloremque dicta? Quasi eius error libero provident non.</p>
+            </article>
+            <article>
+                <h2>Today to do stuff 4</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ab tempore maxime ipsum blanditiis natus quae quia soluta possimus nostrum, sunt accusamus rem est alias autem vitae nobis culpa nisi aut sequi, exercitationem voluptates ex! Voluptatibus quidem debitis nisi suscipit vero voluptate doloremque dicta? Quasi eius error libero provident non.</p>
+            </article>
+            <article>
+                <h2>Today to do stuff 5</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ab tempore maxime ipsum blanditiis natus quae quia soluta possimus nostrum, sunt accusamus rem est alias autem vitae nobis culpa nisi aut sequi, exercitationem voluptates ex! Voluptatibus quidem debitis nisi suscipit vero voluptate doloremque dicta? Quasi eius error libero provident non.</p>
+            </article>
+            <article>
+                <h2>Today to do stuff 6</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam ab tempore maxime ipsum blanditiis natus quae quia soluta possimus nostrum, sunt accusamus rem est alias autem vitae nobis culpa nisi aut sequi, exercitationem voluptates ex! Voluptatibus quidem debitis nisi suscipit vero voluptate doloremque dicta? Quasi eius error libero provident non.</p>
+            </article>
+        </section>
+    </div>
+
+    <!-- Script for change layout -->
+    <script>
+        $("a.stack").on("click", function(){
+            $("article").addClass("stack");
+        });
+
+        $("a.grid").on("click", function(){
+            $("article").removeClass("stack");
+        });
+    </script>
+</body>
+</html>
