@@ -1,0 +1,124 @@
+*{
+    font-family: Verdana;
+    margin: 0;
+}
+
+body{
+    background: #eee;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Menu base style */
+nav{
+    background: #333;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    /* 07. give each a-tag padding, to have some space to breath */
+    padding: 10px;
+    /* 07. in order to show space-around and space-between property */
+    /* background-color: #777; */
+
+    /* 08. on smaller screen, move links(text) to the center of row */
+    text-align: center;
+}
+
+nav ul{
+    list-style-type: none;
+    /* 07. strip out default padding, let a-tag all list on top of each other */
+    padding: 0;
+}
+
+nav a:hover{
+    background-color: #555;
+}
+
+/* 08. social links icon style */
+a.fb{
+    background: url(fb.png) no-repeat center;
+    background-size: 80%;
+}
+
+a.tw{
+    background: url(tw.png) no-repeat center;
+    background-size: 80%;
+}
+
+/* 08. make fb and tw text disappear */
+.social a{
+    text-indent: -10000px ;
+}
+
+/* 08. after striping out fb/tw text, icons are too small, to make icon bigger */
+.social{
+    max-width: 80px;
+}
+
+nav ul.social{
+    flex: 1 1 0;
+}
+
+/* 08. on smaller screen, move fb/tw icons to the center of each row */
+.social{
+    margin: 0 auto;
+}
+
+/* 08. in order to list fb icon and tw icon in one row, need to make 
+   ul.social display as flex as well */
+nav ul.social{
+    display: flex;
+}
+
+/* 08. icons are too samll, to make them bigger */
+nav ul.social li{
+    flex: 1 1 0;
+}
+
+/* NOTE: to list items in one row, grab flex-container (ul mostly) and display it as flex;
+         to grow/shrink items, grab flex-item (li mostly) and set flex-grow/shrink rate. */
+
+
+
+/* Flexbox style, only when screen is above 768px, apply flexbox property */
+@media screen and (min-width: 768px){
+    nav ul{
+        display: flex;
+        /* 07. move boxes to center or start or end horizontally */
+        /* justify-content: center; */
+
+        justify-content: flex-start;
+
+        /* what is space-around */
+        /* justify-content: space-around; */
+    }
+
+    nav li{
+        /* flex grow is 1, flex shrink is 1, flex basis is 0 */
+        flex: 1 1 0;
+    }
+
+    /* 08. in order to put main links (4) and social links (2) in one row, 
+           make nav a flex-container */
+    nav{
+        display: flex;
+
+        /* because nav as flex-container has only two boxes (main and social),
+           so justify-content: space between; to place social at the end, and 
+           main at the start */
+        justify-content: space-between;
+    }
+
+    /* 08. on large screen social icons stay in the center of right side,
+           because of margin setting on smaller screen, to fix it: */
+    .social{
+        margin: 0;
+    }
+}
