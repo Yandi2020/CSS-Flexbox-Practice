@@ -1,0 +1,38 @@
+.wrapper{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex-container{
+    display: flex;
+    background: #fff;
+    flex-wrap: wrap;
+}
+
+.box{
+    height: 100px;
+    flex: 0 0 100px;
+}
+
+.one{
+    background: red;
+}
+
+.two{
+    background: green;
+}
+
+.three{
+    background: blue;
+}
+
+/* to control flex flow, need to apply property to flex-container */
+.flex-container{
+    flex-flow: column;
+    /* when flex-flow is column, flex-basis 100px controls height actually;
+       by default flex-flow is row, flex-basis 100px controls width. */
+}
+
+/* NOTE: flex-flow: row, main axis(justify-content) is left to right, cross axis is top to bottom;
+         flex-flow: column, main axis is top to bottom, cross axis(align-items) is left to right. */
