@@ -1,0 +1,108 @@
+/* Base style */
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+body{
+    background: #eee;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* style boxes to show them on the page */
+.box{
+    height: 100px;
+    min-width: 200px;
+}
+
+.one{
+    background: red;
+}
+
+.two{
+    background: green;
+}
+
+.three{
+    background: blue;
+}
+
+/* 02. style it in flexbox, three boxes in one row */
+.flex-container{
+    display: flex;
+    background: #fff;
+}
+
+/* 03. flex grow, set flex-grow:1 (1 growth rate), three boxes 
+   take all available space in the container */
+/* .box{
+    flex-grow: 1;
+} */
+
+/* set three boxes different growth rate */
+/* .one{
+    flex-grow: 1;
+}
+
+.two{
+    flex-grow: 2;
+}
+
+.three{
+    flex-grow: 3;
+}  */
+
+/* 04. flex-shrink */
+/* .box{
+    height: 100px;
+    width: 320px;
+} */
+
+/* the higher number, the more shrink it get, it is relevant measurement,
+   compare with sibling elements. Rarely used */
+/* .one{
+    background: red;
+    flex-shrink: 1;
+}
+
+.two{
+    background: green;
+    flex-shrink: 2;
+}
+
+.three{
+    background: blue;
+    flex-shrink: 3;
+} */
+
+/* 05. flex-wrap, when the available space is less than min-width,
+       blue box moves to the next row (wrap), otherwise it goes out 
+       of the page, need to scroll to see it */
+
+/* .flex-container{
+    flex-wrap: wrap;
+    /* wrap-reverse, blue box moves to the row above red and green boxes */
+} */
+
+/* because flex-grow: 1, when blue box moves to the next row,
+   it takes the whole space */
+/* .box{
+    flex-grow: 1;
+} */
+
+/* 06. flex-basis, */
+
+/* if set min-width when shrink down need to scroll to see the content,
+   but with flex-basis when page shrink, the content will shrink accordingly */
+
+/* .box{
+    flex-basis: 200px;
+} */
+
+/* flex:1 0 200px; shorthand: flex grow is 1, shrink is 0,
+   flex-basis is 200px */
