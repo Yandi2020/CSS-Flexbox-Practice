@@ -1,0 +1,40 @@
+body{
+    background: #eee;
+    color:greenyellow;
+}
+
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+}
+
+#blocks{
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+#blocks div{
+    flex: 0 0 100px;
+    padding: 40px 0;
+    background: grey;
+    text-align: center;
+}
+
+/* Element order as follow, default value is 0, lower number goes first,
+   higher number goes later, minus number goes before than value 0 */
+.one{
+    order: 0;
+}
+
+.two{
+    order: 2;
+}
+
+.three{
+    order: 1;
+}
+
+.four{
+    order: 0;
+}
